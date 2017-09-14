@@ -1,0 +1,11 @@
+version: '3'
+
+#docker network create bridge2
+#docker container run -d --name elasticsearch1 --network bridge2 --network-alias myelastic elasticsearch:2
+#docker container run -d --name elasticsearch2 --network bridge2 --network-alias myelastic elasticsearch:2
+services:
+  elasticsearch1:
+    image: elasticsearch:2
+
+  elasticsearch2:
+    image: elasticsearch:2

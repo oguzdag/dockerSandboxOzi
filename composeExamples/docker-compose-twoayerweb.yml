@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  my_proxy_server:
+    image: nginx:latest
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+
+  my_web_server:
+    image: httpd
+    ports:
+      - '8080:80'
+
