@@ -1,0 +1,16 @@
+version : "3"
+
+services:
+  nexusserver:
+    image: sonatype/nexus
+    volumes:
+      - nexusdata:/sonatype-work
+    ports:
+      - 8081:8081
+
+# TODO : Jenkins will be added
+
+
+volumes:
+  nexusdata:
+
