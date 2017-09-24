@@ -7,10 +7,19 @@ services:
       - nexusdata:/sonatype-work
     ports:
       - 8081:8081
+    environment:
+      - MAX_HEAP:512m
 
-# TODO : Jenkins will be added
+  jenkins:
+    image: jenkins
+    volumes:
+      - jenkinsdata:/var/jenkins_home
+    ports:
+      - 8080:8080
+      - 50000:50000
 
 
 volumes:
   nexusdata:
+  jenkinsdata:
 
